@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adedonha</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.9);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .letter{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .letter h1{
+            font-size: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <h1 id="the-letter">A</h1>
+    </div>
+
+    <script>
+        const letter = document.querySelector('#the-letter');
+        
+        function sortNumber(){
+            const alphabet = ["A","B","C","D","E","F","G","H","I","J","L","M","N","O","P","Q","R","S","T","U","V","X", "Z"];
+            const min = Math.ceil(0);
+            const max = Math.floor(22);
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            return alphabet[randomNumber];
+        }
+
+        document.addEventListener('keypress', (event) => {
+            if(event.code === 'Space'){
+                let interval;
+                let i = 0;
+                interval = setInterval(()=> {
+                    i++;
+                    if(i > 20){
+                        clearInterval(interval);
+                    }
+                    const sortedLetter = sortNumber();
+                    letter.textContent = sortedLetter;
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html>
