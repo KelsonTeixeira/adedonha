@@ -32,7 +32,7 @@ function triggerRaffle(){
   }, 50);
 }
 
-triggerBtn.addEventListener('mousedown', () => {
+triggerBtn.addEventListener('click', () => {
   triggerBtn.style.transform = 'translate(3px, 3px)';
   setTimeout(() => {
     triggerBtn.style.transform = 'translate(0, 0)';
