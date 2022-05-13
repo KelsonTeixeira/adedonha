@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body{
+  background-color: #181818;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1{
+  font-size: 200px;
+  color: #F0F2EF;
+  font-weight: bold;
+  text-shadow: 5px 5px 10px #000;
+}
+
+.container .press-space{
+  margin-bottom: 24px;
+  color: #F0F2EF;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.container .btn{
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #F0F2EF;
+  border-radius: 4px;
+  color: #F0F2EF;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 10px 10px 10px #000;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.container .btn:hover{
+  box-shadow: 15px 15px 15px #000;
+}
+
+@media screen and (max-width: 1180px){
+  .container .press-space{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 512px){
+  .container{max-height: 90vh;}
+  .container h1{font-size: 150px;}
+  .container .btn{margin-top: 32px;}
+}
