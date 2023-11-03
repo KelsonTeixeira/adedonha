@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adedonha</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
-        <p class="press-space">Precione Espaço:</p>
         <h1 id="the-letter">A</h1>
 
         <button id="trigger-btn" class="btn" type="button">Adedooonha</button>
+        <p id="endgame">
+            Você finalizou o alfabeto, <br>
+            aperte "Resetar Jogo", <br> 
+            e volte a jogar
+        </p>
+        
+        <div class="raffled">
+            <h3>Letras já sorteadas:</h3>
+            <p></p>
+            <button id="clear-button">Resetar Jogo</button>
+        </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./script.mjs"></script>
 </body>
 </html>
